@@ -1,13 +1,15 @@
 import { ProductButtons, ProductCard, ProductImage, ProductTitle } from "../components";
+import '../styles/custom-styles.css'
+
 
 const product = {
-  id: '1',
-  title: 'Coffe Mug - Card',
-  img: './coffee-mug.png'
-}
+	id: "1",
+	title: "Coffe Mug - Card",
+	img: "./coffee-mug.png",
+};
 
 export const ShoppingPage = () => {
-  return (
+	return (
 		<div>
 			<h1>Shopping Store</h1>
 			<hr />
@@ -17,22 +19,50 @@ export const ShoppingPage = () => {
 					flexDirection: "row",
 					flexWrap: "wrap",
 				}}
-			></div>
-        
-        {
-          <ProductCard product={product}>
-            <ProductImage />
-            <ProductTitle />
-            <ProductButtons/>
-          </ProductCard>
-        }
-        
-			<ProductCard product={ product }>
-				<ProductCard.Image />
-				<ProductCard.Title title={'probando titulo'}/>
-				<ProductCard.Buttons />
-			</ProductCard>
+			>
+				<ProductCard product={product} className="bg-dark text-white">
+					<ProductCard.Image className="custom-image" />
+					<ProductCard.Title className="text-white" />
+					<ProductCard.Buttons className="custom-buttons" />
+				</ProductCard>
 
+				<ProductCard product={product} className="bg-dark text-white">
+					<ProductImage
+						className="custom-image"
+						style={{
+							boxShadow: "10px 10px 10px rgba(0,0,0,0.3)",
+						}}
+					/>
+					<ProductTitle className="" />
+					<ProductButtons className="custom-buttons" />
+				</ProductCard>
+
+				<ProductCard
+					product={product}
+					style={{
+						backgroundColor: "#70d1f8",
+					}}
+				>
+					<ProductImage
+						style={{
+							boxShadow: "10px 10px 10px rgba(0,0,0,0.3)",
+						}}
+					/>
+					<ProductTitle
+						style={{
+							display: "flex",
+							textAlign: "center",
+							color: "yellow",
+						}}
+					/>
+					<ProductButtons
+						style={{
+							display: "flex",
+							justifyContent: "center",
+						}}
+					/>
+				</ProductCard>
+			</div>
 		</div>
 	);
-}
+};
