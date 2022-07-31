@@ -8,12 +8,15 @@ input, select {
     margin-top: 5px;
     outline: none;
     padding: 10px;
+    border-radius: 8px;
 }
 
 
 button {
     margin-top: 20px;
     padding: 10px;
+    border-radius: 8px;
+
 }
 
 span, .error-message {
