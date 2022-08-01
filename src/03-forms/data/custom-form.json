@@ -1,0 +1,70 @@
+[
+	{
+		"type": "input",
+		"name": "fitstName",
+		"placeholder": "name",
+		"label": "First Name",
+		"value": "",
+    "validations":[
+      {
+        "type": "required"
+      },
+      {
+        "type": "minLength",
+        "value": 5
+      }
+    ]
+	},
+	{
+		"type": "input",
+		"name": "lastName",
+		"placeholder": "cristiano",
+		"label": "Last Name",
+		"value": "",
+		"validations": [
+			{
+				"type": "required"
+			}
+		]
+	},
+	{
+		"type": "email",
+		"name": "email",
+		"placeholder": "correo@correo",
+		"label": "Email",
+		"value": "",
+		"validations": [
+			{
+				"type": "required"
+			},
+      {
+        "type": "email"
+      }
+		]
+	},
+	{
+		"type": "select",
+		"name": "favoriteGame",
+		"label": "Favorite Game",
+		"value": "",
+		"options": [
+			{
+				"id": "1",
+				"label": "Call of dutty"
+			},
+			{
+				"id": "2",
+				"label": "Fifa 2022"
+			},
+			{
+				"id": "3",
+				"label": "Candy Crush"
+			}
+		],
+		"validations": [
+			{
+				"type": "required"
+			}
+		]
+	}
+]
